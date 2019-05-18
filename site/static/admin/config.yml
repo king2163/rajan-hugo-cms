@@ -5,6 +5,16 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "consultant"
+    label: "Consultant"
+    folder: "site/content/consultant"
+    create: true
+    fields: 
+    - {label: "Consultant Name", name: "consultant_name", widget: "string"}
+    - {label: "Specialist Area", name: "specialist_area", widget: "string"}
+    - {label: "My Advice", name: "my_advice", widget: "string"}
+    - {label: "My Background", name: "my_background", widget: "string"}
+    - {label: "Publish Date", name: "date", widget: "datetime"}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -14,6 +24,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "tag", name: "tag", widget: "text"}
+      - {label: "Specialist Area", name: "specialist_area", widget: "string"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages"
