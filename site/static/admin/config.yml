@@ -6,8 +6,10 @@ public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
   - name: "consultant"
+    identifier_field: consultant_name
     label: "Consultant"
     folder: "site/content/consultant"
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     create: true
     fields: 
     - {label: "Consultant Name", name: "consultant_name", widget: "string"}
