@@ -1,6 +1,12 @@
 
-{{.Params.Consultant_name}}<br>
-{{.Params.Specialist_area}}<br>
-{{.Params.My_advice}}<br>
-{{.Params.My_background}}<br>
-
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
+    <div class="flex justify-between grey-3">
+      <p>{{.Params.Consultant_name}}</p>
+      <p>{{.Params.Specialist_area}}</p>
+    </div>
+    <div class="cms mw6">
+      <p>{{ .Params.My_advice }}</p>
+          <p>{{ .Params.My_background}}</p>
+      </div>
+  </div>
